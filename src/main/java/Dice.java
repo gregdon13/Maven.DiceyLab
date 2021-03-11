@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Dice {
-    private Integer sumOfDice = 0;
+    private Integer sumOfDice;
     private Integer numOfDice;
 
     public Dice(Integer numOfDice) {
@@ -16,17 +16,18 @@ public class Dice {
         return diceRolls;
     }
 
-    public void sumOfRolls(ArrayList<Integer> diceRolled) {
-        diceRolled = rollDice();
+    public Integer sumOfRolls() {
+        this.sumOfDice = 0;
+        ArrayList<Integer> diceRolled = rollDice();
         Integer[] diceArr = diceRolled.toArray(new Integer[0]);
         for (int i = 0; i < diceArr.length; i++) {
             sumOfDice += diceArr[i];
         }
+        return sumOfDice;
     }
 
     public int getIndividualRoll() {
-        int ranNum = (int) (Math.random() * 6) + 1;
-        return ranNum;
+        return (int) (Math.random() * 6) + 1;
     }
 
 
@@ -38,4 +39,5 @@ public class Dice {
     public Integer getNumberOfDice() {
         return this.numOfDice;
     }
+
 }

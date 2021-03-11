@@ -25,11 +25,13 @@ public class DiceTest {
     @Test
     public void getSumTest() {
         Dice testRoll = new Dice (2);
-        testRoll.sumOfRolls(testRoll.rollDice());
+        testRoll.sumOfRolls();
         Integer x = testRoll.getSum();
 
         //System.out.print(x);
         Assert.assertTrue(x > 1 && x < 13);
     }
+
+
 
 }
