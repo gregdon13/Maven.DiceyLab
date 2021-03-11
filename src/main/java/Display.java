@@ -1,18 +1,19 @@
-public class Display {
+public class Display extends Simulation {
     //Simulation sim = new Simulation();
 
     Bins bin = new Bins(2, 12);
+    Dice die = new Dice(2);
 
 
     public Display() {
 
     }
 
-    public String printDisplay() {
+    public void printDisplay() {
         String starTable = "";
         for (int i = 2; i < 13; i++) {
-            starTable.concat(i + " : " + bin.getBin(i) + "\n");
+            starTable += i + " : " + bin.getBin(i) + " Wow" + "\n";
         }
-        return starTable;
+        System.out.println(starTable);
     }
 }

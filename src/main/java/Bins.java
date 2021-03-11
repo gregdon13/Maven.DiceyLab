@@ -12,19 +12,19 @@ public class Bins {
 
 
     public void incrementBin(int i) {
-        Integer binTimes = getBin(i);
-        if (binTimes == null) {
-            binMap.put(i, 1);
-        } else {
-            binTimes++;
-            binMap.put(i, binTimes);
-        }
+        counter = getBin(i);
+//
+        Integer newCount = counter++;
+        binMap.put(i, newCount);
     }
 
     public Integer getBin(int i) {
         Integer numOfTimes = binMap.get(i);
-
-        return numOfTimes;
+        if (binMap.get(i) == null) {
+            return 0;
+        } else {
+            return numOfTimes;
+        }
     }
 
 

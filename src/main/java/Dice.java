@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Dice {
-    private Integer sumOfDice;
+    private Integer sumOfDice = 0;
     private Integer numOfDice;
 
     public Dice(Integer numOfDice) {
@@ -17,13 +17,14 @@ public class Dice {
     }
 
     public Integer sumOfRolls() {
-        this.sumOfDice = 0;
+        Integer outputSum = 0;
         ArrayList<Integer> diceRolled = rollDice();
         Integer[] diceArr = diceRolled.toArray(new Integer[0]);
         for (int i = 0; i < diceArr.length; i++) {
-            sumOfDice += diceArr[i];
+            outputSum += sumOfDice + diceArr[i];
         }
-        return sumOfDice;
+
+        return outputSum;
     }
 
     public int getIndividualRoll() {
