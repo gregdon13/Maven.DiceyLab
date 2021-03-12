@@ -25,7 +25,13 @@ public class BinsTest {
 
         Integer thirteenBin = result.getBin(13);
 
+        System.out.println(thirteenBin);
         Assert.assertEquals(expected, thirteenBin);
     }
+
+//    @Test
+//    public void incrementTest() {
+//        Bins result = new Bins();
+//    }
 
 }

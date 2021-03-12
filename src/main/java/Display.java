@@ -1,8 +1,8 @@
 public class Display extends Simulation {
     //Simulation sim = new Simulation();
 
-    Bins bin = new Bins(2, 12);
-    Dice die = new Dice(2);
+
+    //Dice die = new Dice(2);
 
 
     public Display() {

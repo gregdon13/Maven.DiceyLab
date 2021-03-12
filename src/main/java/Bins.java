@@ -12,9 +12,12 @@ public class Bins {
 
 
     public void incrementBin(int i) {
-        counter = getBin(i);
-//
-        Integer newCount = counter++;
+        Integer value = getBin(i);
+        if (value == null) {
+            binMap.put(i, 0);
+        }
+        Integer newCount = value + 1;
+        binMap.remove(i);
         binMap.put(i, newCount);
     }
 
